@@ -10,13 +10,13 @@ const shopTypes =["Gold", "Diamond", "Platinum", "Antique"];
 
 
 const Welcome = () => {
-  const router = useRouter();
+  // const router = useRouter()
   const [activeShopType, setactiveShopType] = useState('Gold')
-  
+
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.userName}>Hello Fadhel</Text>
+        <Text style={styles.userName}>Hello Tryan,</Text>
         <Text style={styles.welcomeMessage}>Find your nearest Jewellery</Text>
       </View>
 
@@ -60,10 +60,17 @@ const Welcome = () => {
         renderItem ={({item}) => (
           <TouchableOpacity
           style={styles.tab(activeShopType, item)}
+          onPress={() => {
+            setactiveShopType(item);
+            // router.push(`/search/${item}`)
+          }}
           >
-            <Text>{item}</Text>
+            <Text style={styles.tabText(activeShopType, item)}>{item}</Text>
           </TouchableOpacity>
            )}
+           keyExtractor={item => item}
+           contentContainerStyle ={{columnGap: SIZES.small}}
+           horizontal
         />
       </View>
 

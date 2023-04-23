@@ -11,31 +11,6 @@ import {ScreenHeaderBtn} from "../components/common/header/ScreenHeaderBtn"
 import MainContainer from "../navigation/MainContainer";
 import { Header } from "@react-navigation/stack";
 
-// export default function App() {
-
-//   const router = useRouter();
-//   return (
-//     <SafeAreaView style={{ flex: 1, backgroundColor:COLORS.lightWhite, justifyContent: "center", alignItems: "center" }}>
-   
-//        <Stack.Screen options={{ 
-//         headerStyle: {backgroundColor: COLORS.lightWhite}, 
-//         headerShadowVisible: false,
-//         // headerLeft: ()=> (
-//         // <ScreenHeaderBtn iconURL={icons.menu} dimension="60%"/>
-//         // ),
-//         // headerRight: ()=> (
-//         //   <ScreenHeaderBtn iconURL={icons.profile} dimension="100%"/>
-//         //   ),
-//           headerTitle: "",
-//         title: "view" }} /> 
-
-//       <Link href="/details"> Go to Home </Link>
-    
-      
-
-//     </SafeAreaView>
-//   );
-// }
 
 function App(){
   return( 
@@ -44,8 +19,11 @@ function App(){
            <Stack.Screen options={{ 
                   headerStyle: {backgroundColor: COLORS.lightWhite}, 
                   headerShadowVisible: false,
+                  // headerShown:false,
                   headerTitle: "",
-                  title: "view" }} /> 
+                  title: "view" }}
+
+                  /> 
                    <MainContainer/>
         </SafeAreaView>
         

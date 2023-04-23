@@ -13,7 +13,7 @@ export default function HomeScreen({navigation}){
         <SafeAreaView style={{flex:1, alignItems:'center', justifyContent:'top'}}>
             
              <Stack.Screen options={{ 
-                  headerStyle: {height:80}, 
+                  headerStyle: {height:100}, 
                   headerShadowVisible: false,
                   headerLeft:()=>(
                   <Ionicons 
@@ -26,8 +26,8 @@ export default function HomeScreen({navigation}){
                   headerRight:()=>(
                     <Image
                     style={{
-                        width: 80, 
-                        height: 80 , 
+                        width: 100, 
+                        height: 100 , 
                         marginRight:20, 
                         borderRadius:50,
                     }}
@@ -37,15 +37,14 @@ export default function HomeScreen({navigation}){
                   headerTitle: "",
                   title: "view" }} 
                   /> 
-
-
-            <Welcome/>
+       
+           <View style={{padding:20}}>
+             <Welcome/>
             <Popularshops/>
             <Nearbyshops/>
-       
-      
+        </View>
 </SafeAreaView>
-        
+   
        
     );
 }
