@@ -7,9 +7,12 @@ import styles from './welcome.style'
 import { icons, SIZES } from '../../../constants'
 
 const shopTypes =["Gold", "Diamond", "Platinum", "Antique"];
-const [activeShopType, setactiveShopType] = useState('Gold')
+
 
 const Welcome = () => {
+  const router = useRouter();
+  const [activeShopType, setactiveShopType] = useState('Gold')
+  
   return (
     <View>
       <View style={styles.container}>
@@ -48,7 +51,7 @@ const Welcome = () => {
               style={styles.searchBtnImage}
               />
             </TouchableOpacity>
-      </View>
+          </View>
 
       <View style={styles.tabsContainer}>
        
@@ -60,8 +63,7 @@ const Welcome = () => {
           >
             <Text>{item}</Text>
           </TouchableOpacity>
- 
-  )}
+           )}
         />
       </View>
 
