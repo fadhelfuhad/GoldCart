@@ -10,6 +10,13 @@
       "eas": {
         "projectId": "5ba858e2-7530-4943-b253-a5fd893c2914"
       }
+    },
+
+    "android": {
+      "package": "com.fadhelfuhad.Goldcart"
+    },
+    "ios": {
+      "bundleIdentifier": "com.fadhelfuhad.Goldcart"
     }
   }
 }

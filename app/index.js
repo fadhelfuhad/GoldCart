@@ -1,4 +1,5 @@
-import { View, ScrollView, SafeAreaView } from "react-native";
+import * as React from "react";
+import { View, ScrollView, SafeAreaView, Pressable, Text } from "react-native";
 import { Link, Stack, useRouter } from "expo-router";
 import { icons } from "../constants/icons";
 import { COLORS } from "../constants";
@@ -7,25 +8,48 @@ import {Popularshops} from "../components"
 import {Welcome} from "../components"
 import {ScreenHeaderBtn} from "../components/common/header/ScreenHeaderBtn"
 
-export default function Home() {
+import MainContainer from "../navigation/MainContainer";
+import { Header } from "@react-navigation/stack";
 
-  const router = useRouter();
-  return (
-    <SafeAreaView style={{ flex: 1, backgroundColor:COLORS.lightWhite, justifyContent: "center", alignItems: "center" }}>
+// export default function App() {
 
-      <Stack.Screen options={{ 
-        headerStyle: {backgroundColor: COLORS.lightWhite}, 
-        headerShadowVisible: false,
-        // headerLeft: ()=> (
-        // <ScreenHeaderBtn iconURL={icons.menu} dimension="60%"/>
-        // ),
-        // headerRight: ()=> (
-        //   <ScreenHeaderBtn iconURL={icons.profile} dimension="100%"/>
-        //   ),
-          headerTitle: "",
-        title: "view" }} />
+//   const router = useRouter();
+//   return (
+//     <SafeAreaView style={{ flex: 1, backgroundColor:COLORS.lightWhite, justifyContent: "center", alignItems: "center" }}>
+   
+//        <Stack.Screen options={{ 
+//         headerStyle: {backgroundColor: COLORS.lightWhite}, 
+//         headerShadowVisible: false,
+//         // headerLeft: ()=> (
+//         // <ScreenHeaderBtn iconURL={icons.menu} dimension="60%"/>
+//         // ),
+//         // headerRight: ()=> (
+//         //   <ScreenHeaderBtn iconURL={icons.profile} dimension="100%"/>
+//         //   ),
+//           headerTitle: "",
+//         title: "view" }} /> 
 
-      <Link href="/details"> Go to home </Link>
-    </SafeAreaView>
+//       <Link href="/details"> Go to Home </Link>
+    
+      
+
+//     </SafeAreaView>
+//   );
+// }
+
+function App(){
+  return( 
+    
+        <SafeAreaView style={{ flex: 1}}>
+           <Stack.Screen options={{ 
+                  headerStyle: {backgroundColor: COLORS.lightWhite}, 
+                  headerShadowVisible: false,
+                  headerTitle: "",
+                  title: "view" }} /> 
+                   <MainContainer/>
+        </SafeAreaView>
+        
   );
 }
+
+export default App;

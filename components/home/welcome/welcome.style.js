@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
     fontFamily: FONT.regular,
     fontSize: SIZES.large,
     color: COLORS.secondary,
+    marginTop: SIZES.large,
   },
   welcomeMessage: {
     fontFamily: FONT.bold,
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
   },
   searchWrapper: {
     flex: 1,
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.lightWhite,
     marginRight: SIZES.small,
     justifyContent: "center",
     alignItems: "center",
