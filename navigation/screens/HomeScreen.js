@@ -6,11 +6,12 @@ import { COLORS, SIZES, icons, images } from "../../constants";
 import { ScrollView } from "react-native-gesture-handler";
 import { Nearbyshops, Popularshops, ScreenHeaderBtn, Welcome } from "../../components";
 import { Ionicons } from '@expo/vector-icons';
+import { setStatusBarBackgroundColor } from "expo-status-bar";
 
 export default function HomeScreen({navigation}){
     return(
        
-        <SafeAreaView style={{flex:1, alignItems:'center', justifyContent:'top'}}>
+        <View style={{flex:1, alignItems:'center', justifyContent:'top'}}>
             
              <Stack.Screen options={{ 
                   headerStyle: {height:100}, 
@@ -18,9 +19,9 @@ export default function HomeScreen({navigation}){
                   headerLeft:()=>(
                   <Ionicons 
                   name="menu" 
-                  size={34} 
+                  size={45} 
                   color="black" 
-                  style={{marginLeft:20}} 
+                  style={{marginLeft:10}} 
                   onPress={()=>{alert("clickable")}}/>
                     ),
                   headerRight:()=>(
@@ -43,7 +44,7 @@ export default function HomeScreen({navigation}){
             <Popularshops/>
             <Nearbyshops/>
         </View>
-</SafeAreaView>
+</View>
    
        
     );

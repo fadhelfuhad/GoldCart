@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
   welcomeMessage: {
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
-    color: COLORS.primary,
-    marginTop: 2,
+    color: COLORS.secondary,
+    marginTop: 1,
   },
   searchContainer: {
     justifyContent: "center",
