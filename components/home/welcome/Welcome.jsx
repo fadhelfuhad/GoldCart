@@ -2,7 +2,6 @@ import {React, useState } from 'react'
 import { View, Text, TextInput, TouchableOpacity, Image, FlatList } from 'react-native'
 import { useRouter } from 'expo-router'
 import { ScrollView } from "react-native-gesture-handler";
-import SearchBar from "react-native-dynamic-search-bar";
 import styles from './welcome.style'
 import { icons, SIZES } from '../../../constants'
 

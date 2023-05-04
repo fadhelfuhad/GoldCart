@@ -1,6 +1,5 @@
 import * as React from "react";
 import { View, Text, Alert, SafeAreaView, Image } from "react-native";
-import SearchBar from "react-native-dynamic-search-bar";
 import { Link, Stack, useRouter } from "expo-router";
 import { COLORS, SIZES, icons, images } from "../../constants";
 import { ScrollView } from "react-native-gesture-handler";
@@ -33,6 +32,7 @@ export default function HomeScreen({navigation}){
                         borderRadius:50,
                     }}
                     source={require('../../assets/images/image.jpg')}
+               
                      />
                   ),
                   headerTitle: "",

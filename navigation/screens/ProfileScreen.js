@@ -1,19 +1,19 @@
 import * as react from "react";
 import { Link, Stack, useRouter } from "expo-router";
-import { View, Text, Alert, Image, SafeAreaView, Button, StyleSheet } from "react-native";
+import { View, Text, Alert, Image, ScrollView, Button, StyleSheet } from "react-native";
 import { COLORS } from "../../constants";
 
 export default function ProfileScreen({navigation}){
     return (
-        <View style={{flex: 1}} >
+        <ScrollView style={{flex: 1}} >
              <Stack.Screen options={{ 
-                  headerStyle: {height:70}, 
+                  headerStyle: {height:30}, 
                   headerShadowVisible: false,
                 //   headerShown:false,
                   headerTitle: "",
                   title: "view" }}
                   /> 
-             {/* <Image source={require('../../assets/images/image.jpg')} style={{width:'100%', height: '20%'}}></Image>  */}
+           
             <View style={styles.profileImageContainer}>
                 <View style={{height: 130, backgroundColor :'#e6c200', width: '100%', borderRadius: 8}}>
                     <Text>&nbsp;</Text>
@@ -31,16 +31,22 @@ export default function ProfileScreen({navigation}){
             <InfoField title={"Email"} info={"tryanleecronning@gmail.com"} />
             <InfoField title={"Phone"} info={"+973 36250240"} />
             <InfoField title={"Address"} info={"Manama, Bahrain"} />
-            <InfoField title={"Other"} info={"Other"} />
-            
-            <View style={{position: 'absolute', alignItems: 'center', bottom:Platform.OS ==="android" ? 20 : 20, width: '100%'}}>
+            <InfoField title={"CPR Number"} info={"970507298"} />
+            <InfoField title={"Nationality"} info={"South African"} />
+            <InfoField title={"Passport Number"} info={"JF2345R"} />
+            <InfoField title={"Billing Address"} info={"Flat 28, Bldg 109, Road 1234, Block 309, Manama, Kingdom of Bahrain"} />
+            <InfoField title={"Postal Address"} info={"2470"} />
+
+
+
+            <View style={{paddingTop: 40 ,position: 'relative', alignItems: 'center', bottom:Platform.OS ==="android" ? 20 : 20, width: '100%'}}>
            
                 <Button title="Edit Profile"></Button> 
                 <Button title="Change Password"></Button>
              
             </View>
           
-        </View>
+        </ScrollView>
     )
 }
 const InfoField = ({title, info}) => {
